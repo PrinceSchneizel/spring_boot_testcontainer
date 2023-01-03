@@ -26,7 +26,6 @@ public class D2controller {
     public void set(@RequestBody String value) {
         stringRedisTemplate.opsForValue().set("foo", value);
     }
-
     @GetMapping("/{id}")
     public D2entity getDemoEntity(@PathVariable("id") Long id) {
         return D2Service.getd2Entity(id);
